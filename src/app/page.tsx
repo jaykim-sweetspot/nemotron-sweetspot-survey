@@ -426,7 +426,7 @@ export default function Home() {
 
               {hfMeta.where ? (
                 <div className="rounded-md border border-[#222] bg-[#111] p-2 font-mono text-[10px] leading-5 text-[#3a3a3a]">
-                  <div>GET /filter</div>
+                  <div>GET /rows (client-side filter)</div>
                   <div>dataset: nvidia/Nemotron-Personas-Korea</div>
                   <div>where: {hfMeta.where}</div>
                 </div>

@@ -25,15 +25,11 @@ export function buildHfWhere(filter: PersonaFilter) {
 export function buildHfFilterUrl(filter: PersonaFilter) {
   const where = buildHfWhere(filter);
   const offset = Math.floor(Math.random() * 200);
-  const qs = new URLSearchParams({
-    dataset: DATASET,
-    config: "default",
-    split: "train",
+  return `https://datasets-server.huggingface.co/filter?dataset=${encodeURIComponent(
+    DATASET,
+  )}&config=default&split=train&where=${encodeURIComponent(
     where,
-    offset: String(offset),
-    length: String(filter.length),
-  });
-  return `https://datasets-server.huggingface.co/filter?${qs.toString()}`;
+  )}&offset=${offset}&length=${filter.length}`;
 }
 
 export async function fetchPersonas(filter: PersonaFilter) {
@@ -49,4 +45,3 @@ export async function fetchPersonas(filter: PersonaFilter) {
     personas,
   };
 }
-

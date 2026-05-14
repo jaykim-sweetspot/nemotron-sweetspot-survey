@@ -21,7 +21,7 @@ npm run dev
 ## 2) 환경변수
 
 - 필수: `ANTHROPIC_API_KEY`
-- 선택: `ANTHROPIC_MODEL` (기본값: `claude-sonnet-4-20250514`)
+- 선택: `ANTHROPIC_MODEL` (기본값: `claude-sonnet-4-6`)
 
 ## 3) Vercel 배포(Import 방식)
 
